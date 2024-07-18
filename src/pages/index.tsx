@@ -1,47 +1,36 @@
-import DynamicComponent from "@/components/DynamicComponent";
-import getResponse from "@/utils/geminiChat";
-import getSitemap from "@/utils/sitemapCreator";
-import { useEffect, useState } from "react";
+import { useState } from 'react';
+import { useRouter } from 'next/router';
 
-const HomePage: React.FC = () => {
-  const [filePath, setFilePath] = useState<string | undefined>(undefined);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
+const IndexPage = () => {
+  const router = useRouter();
+  const [text, setText] = useState('');
 
-  async function test() {
-    try {
-      const user_prompt = "I want to create a portfolio website";
-      // const res = await getSitemap(user_prompt);
-      // const siteMap = JSON.parse(res);
-      // const sections = siteMap["sections"]
-      // console.log(sections) 
-      // const res = await getResponse(user_prompt);
-      // let clean = res.replace(/[^a-zA-Z0-9\-]/g, ''); // Remove all non-alphanumeric characters except hyphen (-)
-      // clean = "hero/" + clean;
-      // console.log(clean);
-      // setFilePath(clean);
-      setFilePath("footer/footer-5");
-    } catch (err) {
-      setError("Failed to fetch response.");
-      console.error(err);
-    } finally {
-      setLoading(false);
-    }
-  }
+  const handleSubmit = () => {
+    router.push({
+      pathname: '/WebBuilder',
+      query: { text: text }
+    });
+  };
 
-  useEffect(() => {
-    test();
-  }, []); // Empty dependency array to run only once after mount
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  if (error) {
-    return <div>{error}</div>;
-  }
-
-  return filePath ? <DynamicComponent filePath={filePath} /> : null;
+  return (
+    <div className="flex justify-center items-center h-screen">
+      <div className="bg-gray-100 p-6 rounded-lg shadow-md w-96">
+        <h1 className="text-2xl font-bold mb-4">Enter Text</h1>
+        <input
+          type="text"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+          className="border border-gray-300 p-2 rounded-md w-full mb-4"
+        />
+        <button
+          onClick={handleSubmit}
+          className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+  );
 };
 
-export default HomePage;
+export default IndexPage;

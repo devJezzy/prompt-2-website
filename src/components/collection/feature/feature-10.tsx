@@ -28,7 +28,7 @@ return (
                                 Feature 1
                             </h1>
                             <p className="text-sm font-light text-gray-700 dark:text-gray-300">
-                                Lorem Ipsum is simply dummy text of the printing and type setting industry. Industry's standard dummy
+                                Lorem Ipsum is simply dummy text of the printing and type setting industry. Industry&apos;s standard dummy
                             </p>
                         </div>
                         <div className="flex flex-col space-y-6 justify-center md:justify-start">
@@ -42,7 +42,7 @@ return (
                                 Feature 1
                             </h1>
                             <p className="text-sm font-light text-gray-700 dark:text-gray-300">
-                                Lorem Ipsum is simply dummy text of the printing and type setting industry. Industry's standard dummy
+                                Lorem Ipsum is simply dummy text of the printing and type setting industry. Industry&apos;s standard dummy
                             </p>
                         </div>
                     </div>
@@ -64,7 +64,7 @@ return (
                                 Feature 1
                             </h1>
                             <p className="text-sm font-light text-gray-700 dark:text-gray-300">
-                                Lorem Ipsum is simply dummy text of the printing and type setting industry. Industry's standard dummy
+                                Lorem Ipsum is simply dummy text of the printing and type setting industry. Industry&apos;s standard dummy
                             </p>
                         </div>
                         <div className="flex flex-col space-y-6 justify-center md:justify-start">
@@ -78,7 +78,7 @@ return (
                                 Feature 1
                             </h1>
                             <p className="text-sm font-light text-gray-700 dark:text-gray-300">
-                                Lorem Ipsum is simply dummy text of the printing and type setting industry. Industry's standard dummy
+                                Lorem Ipsum is simply dummy text of the printing and type setting industry. Industry&apos;s standard dummy
                             </p>
                         </div>
                     </div>

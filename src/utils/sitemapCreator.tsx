@@ -19,7 +19,7 @@ const generationConfig = {
 const sys_prompt = `You are a sitemap creator. You need to create the necessary sections from the list below based on the user's requirements. Only include the necessary sections.
 Available sections:
 hero
-features
+feature
 blog
 about
 cta

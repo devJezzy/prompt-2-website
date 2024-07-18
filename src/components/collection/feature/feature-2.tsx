@@ -7,7 +7,7 @@ return (
             <div className="flex flex-col gap-5">
                 <div className="space-y-4 max-w-xl">
                     <span className="rounded-lg bg-blue-50 dark:bg-gray-900 px-2.5 py-1 text-xs font-semibold tracking-wide text-blue-700 dark:text-gray-100">Feature</span>
-                    <h1 className="text-3xl font-semibold text-blue-950 dark:text-gray-200 md:text-4xl xl:text-5xl leading-tight">Let's us help you growing your busines</h1>
+                    <h1 className="text-3xl font-semibold text-blue-950 dark:text-gray-200 md:text-4xl xl:text-5xl leading-tight">Let&apos;s us help you growing your busines</h1>
                 </div>
                 <p className="text-gray-700 dark:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing
                     elit.</p>
