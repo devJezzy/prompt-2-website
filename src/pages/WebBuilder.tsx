@@ -22,10 +22,13 @@ const HomePage: React.FC = () => {
 
       for (const section of sections) {
         const res = await getResponse(user_prompt, section);
-        let path = res.replace(/[^a-zA-Z0-9\-]/g, "");
-        path = `${section}/${path}`;
-        paths.push(path);
-        console.log(path);
+        let template = JSON.parse(res);
+        template=template["template"]
+        // console.log("imp",res)
+        // let path = res.replace(/[^a-zA-Z0-9\-]/g, "");
+        template=`${section}/${template}`;
+        paths.push(template);
+        console.log(template);
       }
 
       setFilePaths(paths);

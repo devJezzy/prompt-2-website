@@ -1,7 +1,7 @@
 const sys_prompt: { [key: string]: string } = {
   hero: `You are a good selector for hero-section templates. I will provide descriptions of each template within "<template></template>" XML tags.
     not based on template title. title just for your reference.
-    Choose the best template based on user requirements and return "hero-n" for the selected template, where 'n' is the template number.
+    Choose the best template based on user requirements. your response must be return only  "template":"hero-n" for the selected template, where 'n' is the template number.
     
     
     <template>
@@ -50,7 +50,7 @@ const sys_prompt: { [key: string]: string } = {
   feature: `
     You are a good selector for feature-section templates. I will provide descriptions of each template within "<template></template>" XML tags.
     not based on template title. title just for your reference.
-    Choose the best template based on user requirements and return only "feature-n" for the selected template, where 'n' is the template number.
+    Choose the best template based on user requirements . your response must be return only "template":"feature-n" for the selected template, where 'n' is the template number.
     
     <template>
     1.The UI template features a left-aligned headline and subheading. It includes a vertical list of features with icons and descriptions on the left, and a large image on the right. The layout is clean and structured for showcasing key elements.
@@ -69,7 +69,7 @@ const sys_prompt: { [key: string]: string } = {
   blog: `
     You are a good selector for blog-section templates. I will provide descriptions of each template within "<template></template>" XML tags.
     not based on template title. title just for your reference.
-    Choose the best template based on user requirements and return "blog-n" for the selected template, where 'n' is the template number.
+    Choose the best template based on user requirements and return only "template":"blog-n" for the selected template, where 'n' is the template number.
     
     <template>
     1.The UI template features a headline and subheading at the top. Below, it showcases three article cards in a row, each with an image, category, author name, title, and a "Read more" link. A "See More" button is placed at the bottom right. The layout is designed to highlight recent articles with visual appeal and easy navigation.
@@ -82,7 +82,7 @@ const sys_prompt: { [key: string]: string } = {
   about: `
     You are a good selector for about-section templates. I will provide descriptions of each template within "<template></template>" XML tags.
     not based on template title. title just for your reference.
-    Choose the best template based on user requirements and return "about-n" for the selected template, where 'n' is the template number.
+    Choose the best template based on user requirements. your response must be return only "template":"about-n" for the selected template, where 'n' is the template number.
     
     <template>
     1.The UI template features a an image on the left showing a person working on a construction plan. To the right, there is a headline and subheading with a description. Below the text, there are two feature boxes labeled "Our mission" and "Our vision," each with an icon, title, and brief description. The layout is designed to combine visual elements with concise informational sections.
@@ -95,7 +95,7 @@ const sys_prompt: { [key: string]: string } = {
   cta: `
     You are a good selector for cta-section templates. I will provide descriptions of each template within "<template></template>" XML tags.
     not based on template title. title just for your reference.
-    Choose the best template based on user requirements and return "cta-n" for the selected template, where 'n' is the template number.
+    Choose the best template based on user requirements. your response must be returnonly "template":"cta-n" for the selected template, where 'n' is the template number.
     
     <template>
     1.The UI template features a bold headline asking, "Ready to grow your business?" followed by a brief description. To the right, there is a prominent "Get In Touch" button. The layout is simple and focused on encouraging user interaction with a clear call-to-action.
@@ -111,7 +111,7 @@ const sys_prompt: { [key: string]: string } = {
 
     You are a good selector for testimonial-section templates. I will provide descriptions of each template within "<template></template>" XML tags.
     not based on template title. title just for your reference.
-    Choose the best template based on user requirements and return "testimonial-n" for the selected template, where 'n' is the template number.
+    Choose the best template based on user requirements. your response must be return only "template":"testimonial-n" for the selected template, where 'n' is the template number.
     
     <template>
     1.The UI template features a testimonial section titled "Happy Clients" with a quote from a satisfied customer. On the left side, there is a photo of a man wearing headphones, speaking into a microphone. To the right, the testimonial text is displayed, accompanied by the client's name and title. Navigation buttons are provided for browsing through multiple testimonials.
@@ -124,7 +124,7 @@ const sys_prompt: { [key: string]: string } = {
   pricing: `
     You are a good selector for pricing-section templates. I will provide descriptions of each template within "<template></template>" XML tags.
     not based on template title. title just for your reference.
-    Choose the best template based on user requirements and return "pricing-n" for the selected template, where 'n' is the template number.
+    Choose the best template based on user requirements. your response must be return only "template":"pricing-n" for the selected template, where 'n' is the template number.
     
     <template>
     1.The UI template for the "Get access to all MediCare Soft" section offers a clean layout with a strong call-to-action. It highlights the price prominently and lists key advantages. The "Get Started now" button is easy to spot, encouraging users to take immediate action. The section also includes a brief description, adding more context to the offer. The advantages are listed in two columns, making it easy to read and understand the benefits at a glance.
@@ -137,7 +137,7 @@ const sys_prompt: { [key: string]: string } = {
   metrics: `
     You are a good selector for metrics-section templates. I will provide descriptions of each template within "<template></template>" XML tags.
     not based on template title. title just for your reference.
-    Choose the best template based on user requirements and return "metrics-n" for the selected template, where 'n' is the template number.
+    Choose the best template based on user requirements. your response must be return only "template":"metrics-n" for the selected template, where 'n' is the template number.
     
     <template>
     1.This section highlights key statistics about the company, including years of experience, the number of projects completed, customer satisfaction rate, and total clients. The information is presented in a clean and concise format to quickly convey the company's credibility and success.
@@ -150,7 +150,7 @@ const sys_prompt: { [key: string]: string } = {
   trustby: `
     You are a good selector for trustby-section templates. I will provide descriptions of each template within "<template></template>" XML tags.
     not based on template title. title just for your reference.
-    Choose the best template based on user requirements and return "trustby-n" for the selected template, where 'n' is the template number.
+    Choose the best template based on user requirements. your response must be return only "template":"trustby-n" for the selected template, where 'n' is the template number.
     
     <template>
     1.The template displays a section highlighting trust and credibility. It features a row of company logos with a heading "Trusted By Companies Like," set against a dark background.
@@ -161,7 +161,7 @@ const sys_prompt: { [key: string]: string } = {
   footer: `
     You are a good selector for footer-section templates. I will provide descriptions of each template within "<template></template>" XML tags.
     not based on template title. title just for your reference.
-    Choose the best template based on user requirements and return "footer-n" for the selected template, where 'n' is the template number.
+    Choose the best template based on user requirements. your response must be return only "template":"footer-n" for the selected template, where 'n' is the template number.
     
     <template>
     1. It includes navigation links, service and product listings, contact information, and a newsletter subscription form. Social media icons are at the bottom right.
