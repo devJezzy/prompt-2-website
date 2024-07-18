@@ -35,37 +35,37 @@ const services: Service[] = [
     id: 1,
     title: "Service name 1",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto deserunt culpa autem",
-    icon: "/images/icons/web-development.svg",
+    icon: "/images/web-development.svg",
   },
   {
     id: 2,
     title: "Service name 2",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto deserunt culpa autem",
-    icon: "/images/icons/seo.svg",
+    icon: "/images/seo.svg",
   },
   {
     id: 3,
     title: "Service name 3",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto deserunt culpa autem",
-    icon: "/images/icons/web-development.svg",
+    icon: "/images/web-development.svg",
   },
   {
     id: 4,
     title: "Service name 4",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto deserunt culpa autem",
-    icon: "/images/icons/seo.svg",
+    icon: "/images/seo.svg",
   },
   {
     id: 5,
     title: "Service name 5",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto deserunt culpa autem",
-    icon: "/images/icons/web-development.svg",
+    icon: "/images/web-development.svg",
   },
   {
     id: 6,
     title: "Service name 6",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto deserunt culpa autem",
-    icon: "/images/icons/seo.svg",
+    icon: "/images/seo.svg",
   },
 ];
 

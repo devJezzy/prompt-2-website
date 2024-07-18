@@ -26,7 +26,7 @@ cta
 testimonial
 pricing
 metrics
-colab
+trustby
 footer
 `;
 
