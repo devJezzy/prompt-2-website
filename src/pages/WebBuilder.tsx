@@ -45,11 +45,11 @@ const HomePage: React.FC = () => {
     const fetchQuery = async () => {
       const { text } = router.query;
       const query = String(text);
-      if (typeof text === "string") {
-        console.log("Text entered:", text);
-      }
-      await test(query);
-      // setFilePaths(["navbar/navbar-7"]);
+      // if (typeof text === "string") {
+      //   console.log("Text entered:", text);
+      // }
+      // await test(query);
+      setFilePaths(["hero/hero-1"]);
       setLoading(false);
     };
 
