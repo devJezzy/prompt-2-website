@@ -14,8 +14,9 @@ const HomePage: React.FC = () => {
     try {
       const user_prompt = text;
       const siteMapRes = await getSitemap(user_prompt);
+      console.log(siteMapRes);
       const siteMap = JSON.parse(siteMapRes);
-      const sections = siteMap["sections"];
+      const sections = siteMap["section"];
       console.log(sections);
 
       const paths: string[] = [];
@@ -47,9 +48,9 @@ const HomePage: React.FC = () => {
       if (typeof text === "string") {
         console.log("Text entered:", text);
       }
-      if (text) {
-        await test(query);
-      }
+      await test(query);
+      // setFilePaths(["navbar/navbar-7"]);
+      setLoading(false);
     };
 
     fetchQuery();

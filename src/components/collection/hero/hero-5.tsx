@@ -3,71 +3,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
  
-const Navbar = () => {
-const [openNavbar, setOpenNavbar] = useState(false)
-const toggleNavbar = () => {
-    setOpenNavbar(openNavbar => !openNavbar)
-}
-const closeNavbar = () => {
-    setOpenNavbar(false)
-}
-return (
-    <>
-        <div onClick={() => { closeNavbar() }} aria-hidden="true" className={
-            `fixed bg-gray-800/40 inset-0 z-30 ${openNavbar ? "flex lg:hidden" : "hidden"}`
-        } />
-        <header className="absolute inset-x-0 top-0 flex items-center h-20 z-40">
-            <nav className="relative mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 flex gap-x-5 justify-between items-center">
-                <div className="flex items-center min-w-max">
-                    <Link href="#" className="text-xl font-semibold text-gray-800 dark:text-gray-200">
-                        <span className="relative after:absolute after:inset-0 after:rotate-3 after:border after:border-blue-600 text-blue-600 dark:text-blue-400">Health</span>Care
-                    </Link>
-                </div>
-                <div className={`
-                    absolute top-full left-0 bg-white dark:bg-gray-950 lg:!bg-transparent border-b border-gray-200 dark:border-gray-800 py-8 lg:py-0 px-5 sm:px-10 md:px-12 lg:px-0 lg:border-none w-full lg:top-0 lg:relative lg:w-max lg:flex duration-300 ease-linear gap-x-6
-                    ${openNavbar ? "opacity-100 translate-y-0 visible" : "translate-y-10  opacity-0 invisible lg:visible  lg:translate-y-0 lg:opacity-100"}
-                `}>
-                    <ul className="flex flex-col lg:flex-row gap-6 lg:items-center text-gray-700 dark:text-gray-300 lg:w-full lg:justify-center">
-                        <li >
-                            <Link href="#" className="duration-300 ease-linear hover:text-blue-600 ">Home</Link>
-                        </li>
-                        <li >
-                            <Link href="#" className="duration-300 ease-linear hover:text-blue-600 ">Portfolio</Link>
-                        </li>
-                        <li >
-                            <Link href="#" className="duration-300 ease-linear hover:text-blue-600 ">Services</Link>
-                        </li>
-                    </ul>
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-4  lg:min-w-max mt-10 lg:mt-0">
-                        <Link href="#" className="relative px-6 py-3 flex justify-center items-center bg-blue-600 text-white rounded-3xl transition ease-linear hover:bg-blue-800 focus:bg-blue-700">
-                            <span className="relative">
-                                Get Started
-                            </span>
-                        </Link>
-                    </div>
-                </div>
-                <div className="flex items-center lg:hidden">
-                    <button onClick={() => { toggleNavbar() }} aria-label="Toggle navbar" className="outline-none border-l border-l-emerald-100 dark:border-l-gray-800 pl-3 relative py-3 children:flex">
-                        <span aria-hidden="true" className={`
-                                    h-0.5 w-6 rounded bg-gray-800 dark:bg-gray-300 transition duration-300
-                                    ${openNavbar ? "rotate-45 translate-y-[0.33rem]" : ""}
-                                `} />
-                        <span aria-hidden="true" className={`
-                                    mt-2 h-0.5 w-6 rounded bg-gray-800 dark:bg-gray-300 transition duration-300
-                                    ${openNavbar ? "-rotate-45 -translate-y-[0.33rem]" : ""}
-                                `} />
-                    </button>
-                </div>
-            </nav>
-        </header>
- 
-    </>
-)
-}
 export default function HeroSection() {
 return (
     <>
-        <Navbar />
+        
         <main>
             <section className="relative pt-20 lg:pt-24 pb-20 bg-blue-50 dark:bg-gray-900">
                 <div className="absolute top-0 inset-x-0 h-64 flex items-start">

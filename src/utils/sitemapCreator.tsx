@@ -16,8 +16,9 @@ const generationConfig = {
 };
 
 
-const sys_prompt = `You are a sitemap creator. You need to create the necessary sections from the list below based on the user's requirements. Only include the necessary sections.
+const sys_prompt = `You are a sitemap creator. You need to select the necessary sections from available section listout in below based on the user's requirements. Only include the necessary sections.
 Available sections:
+navbar
 hero
 feature
 blog
@@ -28,6 +29,7 @@ pricing
 metrics
 trustby
 footer
+Your response must be section : {available section in array format}
 `;
 
 

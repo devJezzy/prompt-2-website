@@ -1,50 +1,51 @@
 const sys_prompt: { [key: string]: string } = {
+  navbar: `
+    You are a good selector for navbar templates. I will provide descriptions of each template within "<template></template>" XML tags.
+    not based on template title. title just for your reference.
+    Choose the best template based on user requirements . your response must be return only "template":"navbar-n" for the selected template, where 'n' is the template number.
+    
+    <template>
+    1.This template features a logo with name on the left. To the right, there are multiple menu items followed by a prominent button.
+    2.This template features a dual navigation bar. The top bar includes contact information on the left and social media icons on the right. The bottom bar features a logo with name on the left, menu items in the center, and a "Book a call" button on the right.
+    3.This template features a logo with name on the left, centrally-aligned menu items, and a "Get in touch" call-to-action link on the right.
+    4.This template features a name on the left, centrally-aligned menu items, and an icon, "Signin" link, and "Signup" button on the right.
+    5.This template features a logo on the left, centrally-aligned menu items, and a prominent "Get in touch" button on the right.
+    6.This template features a navigation bar with left-aligned menu items. On the right side, there is a user profile icon with a name and a series of social media icons, in center have a name.
+    7.This template features a logo with name on the left, centrally-aligned menu items, and "Login" and "Sign-up" buttons on the right.
+    </template>
+    `,
+
   hero: `You are a good selector for hero-section templates. I will provide descriptions of each template within "<template></template>" XML tags.
     not based on template title. title just for your reference.
     Choose the best template based on user requirements. your response must be return only  "template":"hero-n" for the selected template, where 'n' is the template number.
     
-    
     <template>
     1.Agency Hero Section
-    Header: Logo and name left, navigation bar right, additional button.
-    Main Section: Two-column; headline, subtext, two buttons on left.
+    Two-column; headline, subtext, two buttons on left.
     
     2.Archi Company Hero Section
-    -eader: Logo and name left, navigation center, button right.
-    Main Section: Two-column; left with headline and buttons, right with overlapping images.
-    Footer: Logos of partners/clients.
+    Two-column; left with headline and buttons, right with overlapping images.
     
     3.Creative Agency Hero Section
-    Header: Logo and name left, navigation middle, button right.
-    Main Section: Central headline with text and button.
+    Central headline with text and button.
     
     4.Digital Agency Hero Section
-    Header: Logo and name left, navigation center, button right.
-    Main Section: Left with headline and form, right with service image.
-    Background: Light with soft gradients.
+    Left with headline and form, right with service image.
     
     5.Healthcare Hero Section
-    Header: Name left, navigation right, button.
-    Main Section: Left with headline and email input, right with healthcare image, statistics below.
+    Left with headline and email input, right with healthcare image, statistics below.
     
     6.Tech Agency Hero Section
-    Header: Logo left, navigation center, button right.
-    Main Section: Central headline, text, buttons, and three feature boxes.
+    Central headline, text, buttons, and three feature boxes.
     
     7.Medcare Hero Section
-    Header: Name and navigation center, button right.
-    Main Section: Left with headline and buttons, right with service image, statistics below.
-    Background: Light grey, clean look.
+    Left with headline and buttons, right with service image, statistics below.
     
     8.Portfolio Hero Section
-    Header: Navigation left, name center, social media right.
-    Main Section: Left with heading and statistics, center with image, right with skill boxes.
-    Background: Clean, light, minimalistic.
+    Left with heading and statistics, center with image, right with skill boxes.
     
     9.Podcast Agency Website Hero Section
-    Header: Logo and name left, navigation center, two buttons right.
-    Main Section: Left with headline and promotional tag, center with service image, engagement indicators below.
-    Background: Light with gradient accents.
+    Left with headline and promotional tag, center with service image, engagement indicators below.
     </template>`,
 
   feature: `

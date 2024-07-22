@@ -1,83 +1,6 @@
 "use client"
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
- 
-const Navbar = () => {
-const [openNavbar, setOpenNavbar] = useState(false)
-const toggleNavbar = () => {
-    setOpenNavbar(openNavbar => !openNavbar)
-}
-const closeNavbar = () => {
-    setOpenNavbar(false)
-}
-return (
-    <>
-        <div onClick={() => { closeNavbar() }} aria-hidden="true" className={
-            `fixed bg-gray-800/40 inset-0 z-30 ${openNavbar ? "flex lg:hidden" : "hidden"}`
-        } />
-        <header className="absolute inset-x-0 top-0 flex items-center h-20 z-40 pt-4 px-4">
-            <nav className="relative mx-auto lg:max-w-7xl w-full border border-gray-100 dark:border-gray-900 bg-white/70 dark:bg-gray-950 rounded-xl h-full px-4 flex gap-x-5 justify-between items-center">
-                <div className="flex items-center min-w-max">
-                    <Link href="#" className="text-xl font-semibold text-gray-800 dark:text-gray-200">
-                        <span className="relative after:absolute after:inset-0 after:rotate-3 after:border after:border-green-700 dark:after:border-green-600 text-green-700 dark:text-green-600">Medi</span>Care
-                    </Link>
-                </div>
-                <div className={`
-                    fixed inset-y-0 w-10/12 max-w-md lg:max-w-none bg-white dark:bg-gray-950 lg:!bg-transparent border-b border-gray-200 dark:border-gray-800 py-8 lg:py-0 px-5 sm:px-10 md:px-12 lg:px-0 lg:border-none lg:w-full lg:top-0 lg:relative lg:flex lg:justify-between duration-300 ease-linear gap-x-6
-                    ${openNavbar ? "left-0" : "-left-full lg:left-0"}
-                `}>
-                    <ul className="flex flex-col lg:flex-row gap-6 lg:items-center text-gray-700 dark:text-gray-300 lg:flex-1 lg:justify-center">
-                        <li>
-                            <Link href="#" className="duration-300 ease-linear hover:text-green-600 flex items-center gap-1.5 justify-between">
-                                Solutions
-                                <span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
-                                        <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
-                                    </svg>
-                                </span>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="#" className="duration-300 ease-linear hover:text-green-600 flex items-center gap-1.5 justify-between">
-                                Products
-                                <span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
-                                        <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
-                                    </svg>
-                                </span>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="#" className="duration-300 ease-linear hover:text-green-600 ">Support</Link>
-                        </li>
-                        <li>
-                            <Link href="#" className="duration-300 ease-linear hover:text-green-600 ">Company</Link>
-                        </li>
-                    </ul>
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-4  lg:min-w-max mt-10 lg:mt-0">
-                        <Link href="" className="px-6 h-10 text-sm flex items-center w-full lg:w-max justify-center gap-x-3 border border-gray-200 dark:border-gray-800 rounded-lg text-green-700 dark:text-gray-100 bg-gray-100 dark:bg-gray-900">
-                            Book Demo
-                        </Link>
-                    </div>
-                </div>
-                <div className="flex items-center lg:hidden">
-                    <button onClick={() => { toggleNavbar() }} aria-label="Toggle navbar" className="outline-none border-l border-l-blue-100 dark:border-l-gray-800 pl-3 relative py-3 children:flex">
-                        <span aria-hidden="true" className={`
-                                    h-0.5 w-6 rounded bg-gray-800 dark:bg-gray-300 transition duration-300
-                                    ${openNavbar ? "rotate-45 translate-y-[0.33rem]" : ""}
-                                `} />
-                        <span aria-hidden="true" className={`
-                                    mt-2 h-0.5 w-6 rounded bg-gray-800 dark:bg-gray-300 transition duration-300
-                                    ${openNavbar ? "-rotate-45 -translate-y-[0.33rem]" : ""}
-                                `} />
-                    </button>
-                </div>
-            </nav>
-        </header>
-    </>
-)
-}
  
 const metrics = [
 {
@@ -103,7 +26,6 @@ const metrics = [
 export default function HeroSection() {
 return (
     <>
-        <Navbar />
         <main>
             <section className="relative bg-green-50 dark:bg-gray-900/30 pt-32 lg:pt-24 pb-32 lg:pb-4">
                 <div className="mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 relative">
