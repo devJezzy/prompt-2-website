@@ -1,3 +1,4 @@
+import { GetTripProps } from "@/context/TripContext";
 import getContent from "@/utils/contentEditor";
 import Image from "next/image";
 import Link from "next/link";
@@ -22,6 +23,9 @@ const contentJSON = {
 };
 
 export default function HeroSection() {
+
+  const { userPrompt } = GetTripProps();
+
   const [content, setContent] = useState(contentJSON);
 
   useEffect(() => {
@@ -35,10 +39,10 @@ export default function HeroSection() {
 
       console.log(sys_prompt)
   
-      const query = "create a website showcase my skills";
+      // const query = "create a website showcase my skills";
   
       try {
-        const res = await getContent(query, sys_prompt);
+        const res = await getContent(userPrompt, sys_prompt);
         setContent(JSON.parse(res))
         console.log(res);
       } catch (error) {

@@ -1,11 +1,14 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import { GetTripProps } from '@/context/TripContext';
 
 const IndexPage = () => {
   const router = useRouter();
   const [text, setText] = useState('');
+  const { setUserPrompt } = GetTripProps();
 
   const handleSubmit = () => {
+    setUserPrompt(text)
     router.push({
       pathname: '/WebBuilder',
       query: { text: text }

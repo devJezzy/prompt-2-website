@@ -49,7 +49,7 @@ const HomePage: React.FC = () => {
       //   console.log("Text entered:", text);
       // }
       // await test(query);
-      setFilePaths(["hero/hero-1"]);
+      setFilePaths(["hero/hero-2"]);
       setLoading(false);
     };
 
