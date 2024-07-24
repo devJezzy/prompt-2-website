@@ -1,7 +1,9 @@
-import { GetTripProps } from "@/context/TripContext";
-import getContent from "@/utils/contentEditor";
 import Image from "next/image";
 import Link from "next/link";
+
+// dev
+import { GetTripProps } from "@/context/TripContext";
+import getContent from "@/utils/contentEditor";
 import { useState, useEffect } from "react";
 
 const contentJSON = {
@@ -21,9 +23,10 @@ const contentJSON = {
     alt: "happy team",
   },
 };
+// /dev
 
 export default function HeroSection() {
-
+  // dev
   const { userPrompt } = GetTripProps();
 
   const [content, setContent] = useState(contentJSON);
@@ -52,6 +55,7 @@ export default function HeroSection() {
   
     fetchData();
   }, []);
+  // /dev
 
   return (
     <>
